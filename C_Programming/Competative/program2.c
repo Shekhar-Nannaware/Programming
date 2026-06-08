@@ -1,0 +1,40 @@
+///////////////////////////////////////////////////////
+//
+//  Program To Print 5 Times "Welcome to C Programming" On Screen
+//
+///////////////////////////////////////////////////////
+#include<stdio.h>
+
+///////////////////////////////////////////////////////
+//
+//  Function name : AddTwoNumbers
+//  Input :         int, int
+//  Ouput :         int
+//  Description :   Performs addition of 2 int
+//  Date :          07/06/2026
+//  Author :        Shekhar Jalindar Nannaware
+//
+///////////////////////////////////////////////////////
+
+void Display()
+{
+    int i;
+    for(i = 1; i <= 5; i++)
+    {
+        printf("Welcome to C Programming \n");
+    }
+}
+
+int main()
+{
+    Display();
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////// 
+//
+//  Input :     10.0    11.0
+//  Output :    21.0
+//
+///////////////////////////////////////////////////////

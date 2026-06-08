@@ -1,0 +1,47 @@
+///////////////////////////////////////////////////////
+//
+//  Program To Print 5 to 1 numbers on screen.
+//
+///////////////////////////////////////////////////////
+#include <stdio.h>
+///////////////////////////////////////////////////////
+//
+//  Function name : AddTwoNumbers
+//  Input :         int, int
+//  Ouput :         int
+//  Description :   Performs addition of 2 int
+//  Date :          08/06/2026
+//  Author :        Shekhar Jalindar Nannaware
+//
+///////////////////////////////////////////////////////
+
+int Display()
+{
+    int i = 1;
+
+   
+    while (i <= 5)
+    {
+        printf("%d\n", i);
+        i++;
+    }
+}
+
+int main()
+{
+    Display();
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////// 
+//
+//  Input :     5  
+//  
+//  Output :    1
+//              2
+//              3
+//              4
+//              5
+///////////////////////////////////////////////////////
+
