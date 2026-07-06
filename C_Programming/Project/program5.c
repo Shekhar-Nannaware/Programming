@@ -1,0 +1,53 @@
+///////////////////////////////////////////////////////
+//
+//  Program :      Celsius to Fahrenheit Converter
+//  Description :  Converts temperature from Celsius
+//                 to Fahrenheit.
+//  Input :        Celsius = 30
+//  Output :       30°C = 86°F
+//  Author :       Shekhar Jalindar Nannaware
+//  Date :         05/07/2026
+//
+///////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Input :         Celsius Temperature
+//  Output :        Fahrenheit Temperature
+//  Description :   Converts Celsius into Fahrenheit
+//                  using the standard formula.
+//
+///////////////////////////////////////////////////////
+
+int main()
+{
+    int Celsius = 30;
+    int Fahrenheit = 0;
+
+    ///////////////////////////////////////////////////
+    // Temperature Conversion
+    ///////////////////////////////////////////////////
+
+    Fahrenheit = (Celsius * 9 / 5) + 32;
+
+    ///////////////////////////////////////////////////
+    // Display Result
+    ///////////////////////////////////////////////////
+
+    printf("%d°C = %d°F\n", Celsius, Fahrenheit);
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////
+//
+//  Sample Input :
+//      Celsius = 30
+//
+//  Sample Output :
+//      30°C = 86°F
+//
+///////////////////////////////////////////////////////

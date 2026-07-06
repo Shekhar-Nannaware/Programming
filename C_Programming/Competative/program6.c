@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////////////////
+//
+//  Accept one Number from user and print that number of * on Screen.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+//////////////////////////////////////////////////////////////////////
+//
+//  Function name : AddTwoNumbers
+//  Input :         int, int
+//  Ouput :         int
+//  Description :   Performs addition of 2 int
+//  Date :          09/06/2026
+//  Author :        Shekhar Jalindar Nannaware
+//
+//////////////////////////////////////////////////////////////////////
+
+void Display(int iNo)
+{
+    int iCnt = 0;
+
+    while (iCnt < iNo)
+    {
+        printf("*");
+        iCnt++;
+    }
+}
+
+int main()
+{
+    int iValue = 0;
+   
+    printf("Enter Number\n");
+    scanf("%d",&iValue);
+
+    Display(iValue);
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////
+//
+//  Input :     10
+//  Output :    **********
+//
+///////////////////////////////////////////////////////
