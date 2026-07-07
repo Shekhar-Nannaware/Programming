@@ -1,0 +1,54 @@
+
+
+int main()
+{
+    cout<<"Jay Ganesh...\n";
+
+    return 0;
+}
+
+
+///////////////////////////////////////////////////////
+//
+//  Program :      Basic Welcome Program
+//  Description :   Prints welcome messages on screen
+//  Input :         No Input
+//  Output :        Displays welcome messages
+//  Author :        Shekhar Jalindar Nannaware
+//  Date :          05/07/2026
+//
+///////////////////////////////////////////////////////
+
+#include<iostream>
+
+using namespace std;
+
+///////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Input :         None
+//  Output :        Prints messages on screen
+//  Description :   Entry point of C program
+//
+///////////////////////////////////////////////////////
+
+int main()
+{
+    ///////////////////////////////////////////////////
+    // Output Section
+    ///////////////////////////////////////////////////
+
+    cout<<"Hello, Shekhar!\n";
+    cout<<"Welcome to C Programming..\n";
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////
+//
+//  Sample Output:
+//
+//  Hello, Shekhar!
+//  Welcome to C Programming..
+//
+///////////////////////////////////////////////////////
