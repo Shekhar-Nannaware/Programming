@@ -26,7 +26,3 @@ int main()
     return 0;
 }
 
-// Check Even or Odd
-// #define EVEN 2
-
-// void CheckEvenOdd(int Number);
