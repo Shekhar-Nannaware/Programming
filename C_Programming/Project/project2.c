@@ -1,144 +1,142 @@
+///////////////////////////////////////////////////////
+//
+//  Program :      Employee Salary & Bonus System
+//
+///////////////////////////////////////////////////////
+
 #include<stdio.h>
-#define BONUS_LIMIT 50000
-#define EXPERIENCE_LIMIT 5
+
+#define BONUS_LIMIT        50000
+#define EXPERIENCE_LIMIT   5
+
+///////////////////////////////////////////////////////
+//
+//  Function Name : EmployeeBonus
+//  Input :         Salary, Experience
+//  Output :        Bonus Eligible / Bonus Not Eligible
+//                  Invalid Salary / Invalid Experience
+//  Description :   Checks whether the employee is
+//                  eligible for bonus based on
+//                  salary and experience.
+//  Author :        Shekhar Jalindar Nannaware
+//  Date :          09/07/2026
+//
+///////////////////////////////////////////////////////
+
+void EmployeeBonus(int Salary, int Experience)
+{
+    if(Salary >= 0)
+    {
+        if(Experience >= 0)
+        {
+            if(   (Salary >= BONUS_LIMIT) &&
+                  (Experience >= EXPERIENCE_LIMIT)
+              )
+            {
+                printf("Bonus Eligible\n");
+            }
+            else
+            {
+                printf("Bonus Not Eligible\n");
+            }
+        }
+        else
+        {
+            printf("Invalid Experience\n");
+        }
+    }
+    else
+    {
+        printf("Invalid Salary\n");
+    }
+}
+
+///////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Input :         Salary, Experience
+//  Output :        Displays Employee Bonus Status
+//  Description :   Accepts salary and experience
+//                  from the user and checks
+//                  bonus eligibility.
+//  Author :        Shekhar Jalindar Nannaware
+//  Date :          09/07/2026
+//
+///////////////////////////////////////////////////////
 
 int main()
 {
-    printf("");
+    int Salary = 0;
+    int Experience = 0;
+
+    ///////////////////////////////////////////////////
+    // Accept Employee Information
+    ///////////////////////////////////////////////////
+
+    printf("Enter Salary : ");
+    scanf("%d", &Salary);
+
+    printf("Enter Experience : ");
+    scanf("%d", &Experience);
+
+    ///////////////////////////////////////////////////
+    // Check Bonus Eligibility
+    ///////////////////////////////////////////////////
+
+    EmployeeBonus(Salary, Experience);
+
+    return 0;
 }
 
+///////////////////////////////////////////////////////
+//
+//  Input 1 :
+//
+//      Salary      : 60000
+//      Experience  : 7
+//
+//  Output 1 :
+//
+//      Bonus Eligible
+//
+///////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////
+//
+//  Input 2 :
+//
+//      Salary      : 35000
+//      Experience  : 8
+//
+//  Output 2 :
+//
+//      Bonus Not Eligible
+//
+///////////////////////////////////////////////////////
 
-/*
+///////////////////////////////////////////////////////
+//
+//  Input 3 :
+//
+//      Salary      : -1000
+//      Experience  : 5
+//
+//  Output 3 :
+//
+//      Invalid Salary
+//
+///////////////////////////////////////////////////////
 
-⭐⭐ Mini Project 2 : Employee Salary & Bonus System
-Function
-void EmployeeBonus(int Salary, int Experience);
-Macros
-#define BONUS_LIMIT 50000
-#define EXPERIENCE_LIMIT 5
-Rules
-Salary < 0 → Invalid Salary
-Experience < 0 → Invalid Experience
+///////////////////////////////////////////////////////
+//
+//  Input 4 :
+//
+//      Salary      : 60000
+//      Experience  : -2
+//
+//  Output 4 :
+//
+//      Invalid Experience
+//
+///////////////////////////////////////////////////////
 
-If
-
-Salary >= 50000
-AND
-Experience >= 5
-
-Output
-
-Bonus Eligible
-
-Else
-
-Bonus Not Eligible
-Sample
-Enter Salary : 60000
-Enter Experience : 7
-
-Bonus Eligible
-
-
-
-
-
-⭐⭐⭐ Mini Project 3 : ATM Withdrawal System
-Function
-void ATM(int Balance, int WithdrawAmount);
-Macros
-#define MIN_BALANCE 1000
-Rules
-Balance < 0 → Invalid Balance
-WithdrawAmount <= 0 → Invalid Amount
-
-Withdrawal होईल जर
-
-WithdrawAmount <= Balance
-AND
-
-Balance - WithdrawAmount >= 1000
-Output
-
-Transaction Successful
-Remaining Balance : xxxx
-
-Else
-
-Insufficient Balance
-Sample
-Balance : 10000
-Withdraw : 3000
-
-Transaction Successful
-Remaining Balance : 7000
-
-
-
-
-
-
-⭐⭐⭐⭐ Mini Project 4 : Electricity Bill System
-Function
-void CalculateBill(int Units);
-Macros
-#define RATE1 5
-#define RATE2 8
-#define RATE3 10
-Rules
-Units <0
-
-Invalid
-0-100
-
-Units × 5
-101-300
-
-Units × 8
-Above 300
-
-Units × 10
-Sample
-Enter Units : 250
-
-Bill : 2000
-
-
-
-
-
-
-⭐⭐⭐⭐⭐ Mini Project 5 : Bank Loan Eligibility System
-Function
-void LoanEligibility(int Age,int Salary,int CIBIL);
-Macros
-#define MIN_AGE 21
-#define MAX_AGE 60
-#define MIN_SALARY 30000
-#define MIN_CIBIL 750
-Rules
-
-Age
-21–60
-
-Salary
->=30000
-
-CIBIL
->=750
-
-तीनही Conditions True असतील तर
-
-Loan Approved
-नाहीतर
-
-Loan Rejected
-Sample
-Age : 25
-Salary : 45000
-CIBIL : 780
-
-Loan Approved
-
-*/

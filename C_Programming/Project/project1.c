@@ -1,16 +1,8 @@
-/******************************************************************************
-*
-*   Project Name : Student Result Management System
-*
-*   Author       : Shekhar Nannaware
-*
-*   Language     : C Programming
-*
-*   Description  :
-*   This program checks whether a student is eligible based on attendance.
-*   If eligible, it displays the student's grade according to the marks.
-*
-******************************************************************************/
+///////////////////////////////////////////////////////
+//
+//  Program :      Student Result Management System
+//
+///////////////////////////////////////////////////////
 
 #include<stdio.h>
 
@@ -23,14 +15,19 @@
 #define C_GRADE            60
 #define D_GRADE            35
 
-///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 //
-// Function Name : StudentResult
-// Description   : Checks attendance and displays grade.
-// Input         : Integer, Integer
-// Output        : Grade / Not Eligible / Invalid Marks
+//  Function Name : StudentResult
+//  Input :         Marks, Attendance
+//  Output :        Grade / Not Eligible / Invalid Marks
+//  Description :   Checks whether the student is
+//                  eligible based on attendance.
+//                  If eligible, displays the grade
+//                  according to the marks.
+//  Author :        Shekhar Jalindar Nannaware
+//  Date :          08/07/2026
 //
-///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 
 void StudentResult(int Marks, int Attendance)
 {
@@ -48,7 +45,7 @@ void StudentResult(int Marks, int Attendance)
 
     if(Marks >= A_GRADE)
     {
-        printf("Result  : A Grade\n");
+        printf("Result : A Grade\n");
     }
     else if(Marks >= B_GRADE)
     {
@@ -68,27 +65,78 @@ void StudentResult(int Marks, int Attendance)
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 //
-// Entry Point Function
+//  Function Name : main
+//  Input :         Marks, Attendance
+//  Output :        Displays Student Result
+//  Description :   Accepts student marks and
+//                  attendance from the user and
+//                  displays the final result.
+//  Author :        Shekhar Jalindar Nannaware
+//  Date :          08/07/2026
 //
-///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 
 int main()
 {
     int iMarks = 0;
     int iAttendance = 0;
 
-    printf("Enter Student Marks  : ");
+    ///////////////////////////////////////////////////
+    // Accept Student Details
+    ///////////////////////////////////////////////////
+
+    printf("Enter Student Marks : ");
     scanf("%d", &iMarks);
 
-    printf("Enter Attendance     : ");
+    printf("Enter Attendance    : ");
     scanf("%d", &iAttendance);
 
+    ///////////////////////////////////////////////////
+    // Display Student Result
+    ///////////////////////////////////////////////////
 
     StudentResult(iMarks, iAttendance);
-
 
     return 0;
 }
 
+///////////////////////////////////////////////////////
+//
+//  Input 1 :
+//
+//      Marks       : 88
+//      Attendance  : 82
+//
+//  Output 1 :
+//
+//      Result : B Grade
+//
+///////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////
+//
+//  Input 2 :
+//
+//      Marks       : 95
+//      Attendance  : 60
+//
+//  Output 2 :
+//
+//      Not Eligible
+//
+///////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////
+//
+//  Input 3 :
+//
+//      Marks       : 120
+//      Attendance  : 80
+//
+//  Output 3 :
+//
+//      Invalid Marks
+//
+///////////////////////////////////////////////////////
