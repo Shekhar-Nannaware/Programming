@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Program7
+public class Program07
 {
 
     static float AddTwoNumber(
