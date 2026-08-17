@@ -33,4 +33,8 @@ public class program18
 
         sc.close();
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
