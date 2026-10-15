@@ -1,4 +1,4 @@
-class program20
+class program001
 {
     public static void main(String A[])
     {

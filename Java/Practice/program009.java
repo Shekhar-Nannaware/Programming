@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-class program33
+class program009
 {
     public static void main(String A[])
     {

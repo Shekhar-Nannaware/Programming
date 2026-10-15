@@ -12,7 +12,7 @@ class Arithematic
     }
 }
 
-class program37
+class program013
 {
     public static void main(String A[])
     {

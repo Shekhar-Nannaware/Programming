@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-class program35
+class program011
 {
     public static int Addition(int iNo1, int iNo2)
     {
