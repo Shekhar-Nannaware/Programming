@@ -1,38 +1,34 @@
+// Approach 3
+
 import java.util.Scanner;
-public class program13 
+
+class Arithematic
 {
-    public static boolean CheckEvenOdd(int iNo)
+    public static int Addition(int iNo1, int iNo2)
     {
-        int iRemainder = 0;
-        if(iRemainder == 0)
-        {
-             return true;
-        }
-        else
-        {
-            return false;
-        }
+        int iAns = 0;
+        iAns = iNo1 + iNo2;
+        return iAns;
     }
-    public static void main(String[] args)
+}
+
+class program37
+{
+    public static void main(String A[])
     {
-         int iValue = 0;
-         boolean bRet = false;
-         
-         Scanner sc = new Scanner(System.in);
-         System.out.println("Enter number to check whether it is Even or Odd : ");
-         iValue = sc.nextInt();
+        Scanner scanner = null;
+        int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-         bRet = CheckEvenOdd(iValue);
+        scanner = new Scanner(System.in);
 
-         if(bRet == true)
-         {
-            System.out.println(iValue + " is Even");
-         }
-         else
-         {
-            System.out.println(iValue + " is Odd");
-         }
+        System.out.println("Enter first number : ");
+        iValue1 = scanner.nextInt();
 
-         sc.close();
-    }    
+        System.out.println("Enter second number : ");
+        iValue2 = scanner.nextInt();
+
+        iResult = Arithematic.Addition(iValue1, iValue2);
+
+        System.out.println("Addition is : "+iResult);
+    }
 }

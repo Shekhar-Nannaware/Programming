@@ -1,24 +1,17 @@
 import java.util.Scanner;
 
-public class Program04
+class program23
 {
-    public static void main(String args[])
+    public static void main(String A[])
     {
-        float fSum;
-        float iValue1;
-        float iValue2;
+        Scanner scanner = null;
+        String sName = null;
 
-        Scanner sc = new Scanner(System.in);
+        scanner = new Scanner(System.in);
 
-        System.out.println("Enter First Number : ");
-         iValue1= sc.nextFloat();
+        System.out.println("Enter your name : ");
+        sName = scanner.nextLine();
 
-        System.out.println("Enter Second Number : ");
-         iValue2 = sc.nextFloat();
-
-        fSum = iValue1 + iValue2;
-        System.out.println("Addition is : "+fSum);
-
-        sc.close();
+        System.out.println("Welcome "+sName);
     }
 }

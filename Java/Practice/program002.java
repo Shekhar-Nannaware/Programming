@@ -1,19 +1,14 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Program02
+class program21
 {
-    public static void main(String args[])
+    public static void main(String A[])
     {
-        int iSum = 0;
-        Scanner sc = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);
 
-        System.out.println("Enter First Number : ");
-        int i = sc.nextInt();
+        System.out.println("Enter your name : ");
+        String name = sobj.nextLine();
 
-        System.out.println("Enter Second Number : ");
-        int j = sc.nextInt();
-
-        iSum = i + j;
-        System.out.println("Addition is : "+iSum);
+        System.out.println("Welcome "+name);
     }
 }

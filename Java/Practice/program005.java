@@ -1,32 +1,17 @@
 import java.util.Scanner;
 
-public class Program05
+class program24
 {
-
-    static float AddTwoNumber(float fValue1, float fValue2)
+    public static void main(String A[])
     {
-        float fAns;
+        Scanner scanner = null;
+        String sName = null;
 
-        fAns = fValue1 + fValue2;
-        return fAns;
-    }
-    public static void main(String args[])
-    {
-        float fSum;
-        float iValue1;
-        float iValue2;
+        scanner = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name : ");
+        sName = scanner.next();
 
-        System.out.println("Enter First Number : ");
-         iValue1= sc.nextFloat();
-
-        System.out.println("Enter Second Number : ");
-         iValue2 = sc.nextFloat();
-
-        fSum = AddTwoNumber(iValue1,iValue2);
-        System.out.println("Addition is : "+fSum);
-
-        sc.close();
+        System.out.println("Welcome "+sName);
     }
 }

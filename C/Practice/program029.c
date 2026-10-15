@@ -1,29 +1,29 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-int Display( int iValue)
+float Average(int iNo1, int iNo2)
 {
-    int iCnt = 0;
+    float fAns = 0.0f;
 
-    // Updator
-    if (iValue < 0)
-    {
-        iValue = -iValue;
-    }
+    fAns = (iNo1 + iNo2) / 2;
 
-    for (iCnt = 0; iCnt < iValue; iCnt++)
-    {
-       printf("jay Ganesh...\n");        
-    }
+    return fAns;
 }
 
 int main()
 {
-    int iRet = 0;
+    int iValue1 = 0, iValue2 = 0;
+    float fResult = 0.0f;
 
-    printf("Enter the frequency : ");
-    scanf("%d",&iRet);
+    printf("Enter first number : \n");
+    scanf("%d",&iValue1);
+    
+    printf("Enter second number : \n");
+    scanf("%d",&iValue2);
 
-    Display(iRet);
+    fResult = Average(iValue1, iValue2);
 
-    return 0;
+    printf("Average is : %f\n",fResult);
+    
+    return EXIT_SUCCESS;
 }

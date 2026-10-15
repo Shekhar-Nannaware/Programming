@@ -1,32 +1,31 @@
-import  java.util.Scanner;
+// Approach 2
 
-public class program10 
+import java.util.Scanner;
+
+class program34
 {
-    static  void CheckEvenOdd(int iNo)
+    public int Addition(int iNo1, int iNo2)
     {
-        int iRemainder;
-        iRemainder = iNo % 2;
-
-        if(iRemainder == 0)
-        {
-            System.out.println("Number Is Even  ");
-        }
-        else
-        {
-            System.out.println("Number Is Odd ");
-        }
+        int iAns = 0;
+        iAns = iNo1 + iNo2;
+        return iAns;
     }
-    public static void main(String[] args) 
+
+    public static void main(String A[])
     {
-        int iValue;
+        Scanner scanner = null;
+        int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-       Scanner sc = new Scanner(System.in);
+        scanner = new Scanner(System.in);
 
-       System.out.println("Enter Number : ");
-       iValue = sc.nextInt();
+        System.out.println("Enter first number : ");
+        iValue1 = scanner.nextInt();
 
-       CheckEvenOdd(iValue);
+        System.out.println("Enter second number : ");
+        iValue2 = scanner.nextInt();
 
-       sc.close();      
-    }    
+        iResult = Addition(iValue1, iValue2); // Error
+
+        System.out.println("Addition is : "+iResult);
+    }
 }

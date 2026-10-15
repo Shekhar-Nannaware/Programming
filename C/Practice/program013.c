@@ -1,40 +1,74 @@
 #include<stdio.h>
-#include<stdbool.h>
+#include<stdlib.h>
 
-bool CheckEvenOdd(int iNo)
+///////////////////////////////////////////////////
+//
+//  Function Name   :   Addition 
+//  Input           :   Integer, Integer 
+//  Output          :   Integer
+//  Description     :   Performs addition
+//  Date            :   04/10/2026
+//  Author          :   Piyush Manohar Khairnar
+//
+///////////////////////////////////////////////////
+
+int Addition(
+                int iNo1,   // First input
+                int iNo2    // Second input
+            )
 {
-    int iRemainder = 0;
+    int iAns = 0;
 
-    iRemainder = iNo % 2;
+    iAns = iNo1 + iNo2;     // Business Logic
 
-    if(iRemainder == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return iAns;
 }
+
+///////////////////////////////////////////////////
+//
+//  Entry point of the application
+//
+///////////////////////////////////////////////////
 
 int main()
 {
-    int iValue = 0;
-    bool bRet = false;
+    int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-    printf("Enter number to check whether it is Even or Odd : ");
-    scanf("%d",&iValue);
-
-    bRet = CheckEvenOdd(iValue);
-
-    if(bRet == true)
+    printf("Enter first number : \n");
+    if(scanf("%d",&iValue1) != 1)
     {
-        printf("%d is Even\n",iValue);
-    }
-    else
-    {
-        printf("%d is Odd\n",iValue);
+        fprintf(stderr,"Unable to proceed as input is invalid\n");
+
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    printf("Enter second number : \n");
+    if(scanf("%d",&iValue2) != 1)
+    {
+        fprintf(stderr,"Unable to proceed as input is invalid\n");
+
+        return EXIT_FAILURE;
+    }
+
+    iResult = Addition(iValue1, iValue2);      
+
+    printf("Addition is : %d\n",iResult);
+
+    return EXIT_SUCCESS;
 }
+
+///////////////////////////////////////////////////
+//     Step 5 :    Test the program
+//
+//      Tested test cases
+//-------------------------------------------------
+//      Input1      Input2      Output
+//-------------------------------------------------
+//      10          11          21
+//      11          0           11
+//      0           11          11
+//      20          -9          11
+//      -9          20          11
+//      -20         -11         -31
+//-------------------------------------------------
+///////////////////////////////////////////////////

@@ -1,12 +1,26 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    printf("jay Ganesh...\n");
-    printf("jay Ganesh...\n");
-    printf("jay Ganesh...\n");
-    printf("jay Ganesh...\n");
-    printf("jay Ganesh...\n");
+    char sName[30];
+    int iAge = 0;
+    float fMarks = 0.0f;
 
-    return 0;
+    printf("Enter your name : \n");
+    scanf("%[^'\n']s",sName);   // Enter remains in input buffer
+
+    fflush(stdin);
+
+    printf("Enter your age : \n");
+    scanf("%d",&iAge);
+
+    printf("Enter your marks : \n");
+    scanf("%f",&fMarks);
+
+    printf("Welcome %s\n",sName);
+    printf("Your age is : %d\n",iAge);
+    printf("Your marks : %f\n",fMarks);
+
+    return EXIT_SUCCESS;
 }

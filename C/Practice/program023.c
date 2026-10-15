@@ -1,49 +1,24 @@
-#include <stdio.h>
-#define AGE_INVAID -1
-
-int CalculateTicketPrice(int iAge)
-{
-    // Input Filter
-    if(iAge < 0)
-    {
-        return -1;
-    }
-    if (iAge >= 0 && iAge <= 5)
-    {
-        return 0;
-    }
-    else if (iAge >= 6 && iAge <= 18)
-    {
-        return 500;
-    }
-     else if (iAge >= 19 && iAge <= 50)
-    {
-        return 900;
-    }
-    else
-    {
-        return 400;
-    }
-}
+#include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    int iValue = 0;
-    int iRet = 0;
+    char sName[30];
+    int iAge = 0;
+    float fMarks = 0.0f;
 
-    printf("Please enter your age to calculate ticket prices : ");
-    scanf("%d", &iValue);
+    printf("Enter your name : \n");
+    scanf("%[^'\n']s",sName);   // Enter remains in input buffer
 
-    iRet = CalculateTicketPrice(iValue);
+    printf("Enter your age : \n");
+    scanf(" %d",&iAge); // Space added
 
-    if (iRet == AGE_INVAID)
-    {
-        printf("please enter your positive age\n");
-    }
-    else
-    {
-        printf("Your ticket price will be %d ruppes\n",iRet);
-    }
-    
-    return 0;
+    printf("Enter your marks : \n");
+    scanf("%f",&fMarks);
+
+    printf("Welcome %s\n",sName);
+    printf("Your age is : %d\n",iAge);
+    printf("Your marks : %f\n",fMarks);
+
+    return EXIT_SUCCESS;
 }

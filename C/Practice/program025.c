@@ -1,12 +1,24 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    int iCnt = 0;
-    for (iCnt = 0; iCnt < 5; iCnt++)
+    int iValue1 = 0, iValue2 = 0, iResult = 0;
+
+    printf("Enter first number : \n");
+    scanf("%d",&iValue1);
+    
+    printf("Enter second number : \n");
+    scanf("%d",&iValue2);
+
+    if(iValue1 > iValue2)
     {
-       printf("jay Ganesh...\n");        
+        printf("Maximum is : %d\n",iValue1);
+    }
+    else
+    {
+        printf("Maximum is : %d\n",iValue2);
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

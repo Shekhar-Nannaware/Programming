@@ -1,19 +1,53 @@
+/*
+    Step 1 :    Undesrtand the problem statement
+    Step 2 :    Write the algithm
+    Step 3 :    Decide the programming language
+    Step 4 :    Write the program
+    Step 5 :    Test the program
+*/
+
+///////////////////////////////////////////////////
+//
+//  Step 1 : Undesrtand the problem statement
+//           User is going to enter any 2 integers
+//           And we have to perfom addition
+//
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+//  Step 2 :    Write the algithm
+/*
+    START
+        Accept first number as No1
+        Accept second number as No2
+        Create the variable as Ans to store the result
+        Perform the addition and store into Ans
+        Display the result from Ans
+    END
+*/
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+//
+//    Step 3 :    Decide the programming language
+//                We select C programming
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+//
+//    Step 4 :    Write the program
+//
+///////////////////////////////////////////////////
+
 #include<stdio.h>
 
 int main()
 {
-    int i = 0;
-    int j = 0;
-    int k = 0;
+    int i = 10, j = 11, k = 0;
 
-    printf("Enter First Number : \n");
-    scanf("%d",&i);
+    k = i + j;      // Business Logic
 
-    printf("Enter Second Number : \n");
-    scanf("%d",&j);
-
-    k = i + j;
-    printf("Addition is %d\n",k);
+    printf("%d\n",k);
 
     return 0;
 }

@@ -1,36 +1,21 @@
 #include<stdio.h>
-#include<stdbool.h>
-
-bool CheckEvenOdd(int iNo)
-{
-    if((iNo % 2) == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+#include<stdlib.h>
 
 int main()
 {
     int iValue = 0;
-    bool bRet = false;
 
-    printf("Enter number to check whether it is Even or Odd : ");
+    printf("Enter number : \n");
     scanf("%d",&iValue);
 
-    bRet = CheckEvenOdd(iValue);
-
-    if(bRet)
+    if((iValue % 2) == 0)
     {
-        printf("%d is Even\n",iValue);
+        printf("It is Even number\n");
     }
     else
     {
-        printf("%d is Odd\n",iValue);
+        printf("It is Odd number\n");
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

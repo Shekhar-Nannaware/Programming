@@ -1,41 +1,14 @@
-#include <stdio.h>
-
-int CalculateTicketPrice(int iAge)
-{
-    // Input Filter
-    if(iAge < 0)
-    {
-        return -1;
-    }
-    if (iAge >= 0 && iAge <= 5)
-    {
-        return 0;
-    }
-    else if (iAge >= 6 && iAge <= 18)
-    {
-        return 500;
-    }
-     else if (iAge >= 19 && iAge <= 50)
-    {
-        return 900;
-    }
-    else
-    {
-        return 400;
-    }
-}
+#include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    int iValue = 0;
-    int iRet = 0;
+    char sName[30];
 
-    printf("Please enter your age to calculate ticket prices : ");
-    scanf("%d", &iValue);
+    printf("Enter your name : \n");
+    scanf("%[^'\n']s",sName);
 
-    iRet = CalculateTicketPrice(iValue);
+    printf("Welcome %s\n",sName);
 
-    printf("Your ticket price will be %d ruppes\n", iRet);
-
-    return 0;
+    return EXIT_SUCCESS;
 }

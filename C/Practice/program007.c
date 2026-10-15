@@ -1,29 +1,85 @@
+/*
+    Step 1 :    Undesrtand the problem statement
+    Step 2 :    Write the algithm
+    Step 3 :    Decide the programming language
+    Step 4 :    Write the program
+    Step 5 :    Test the program
+*/
+
+///////////////////////////////////////////////////
+//
+//  Step 1 : Undesrtand the problem statement
+//           User is going to enter any 2 integers
+//           And we have to perfom addition
+//
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+//  Step 2 :    Write the algithm
+/*
+    START
+        Accept first number as No1
+        Accept second number as No2
+        Create the variable as Ans to store the result
+        Perform the addition and store into Ans
+        Display the result from Ans
+    END
+*/
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+//
+//    Step 3 :    Decide the programming language
+//                We select C programming
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+//
+//    Step 4 :    Write the program
+//
+///////////////////////////////////////////////////
+
 #include<stdio.h>
 
-float AddTwoNumber(  
-                        float fNo1,       // first input
-                        float fNo2        // Second input
-                   )
-{
-    float fAns = 0.0f;                    // Variable to store result 
-    fAns = fNo1 + fNo2;                   // Perform Addition
+///////////////////////////////////////////////////
+//
+//  Function Name   :   Addition 
+//  Input           :   Integer, Integer 
+//  Output          :   Integer
+//  Description     :   Performs addition
+//  Date            :   04/10/2026
+//  Author          :   Piyush Manohar Khairnar
+//
+///////////////////////////////////////////////////
 
-    return fAns;
+int Addition(int iNo1, int iNo2)
+{
+    int iAns = 0;
+
+    iAns = iNo1 + iNo2;     // Business Logic
+
+    return iAns;
 }
+
+///////////////////////////////////////////////////
+//
+//  Entry point of the application
+//
+///////////////////////////////////////////////////
 
 int main()
 {
-    float fValue1 = 0.0f;                  //  To Store First input
-    float fValue2 = 0.0f;                  //  To Store Second input
-    float fResult = 0.0f;                  //  To Store the Result
+    int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-    printf("Enter First Number : \n");
-    scanf("%f",&fValue1);
+    printf("Enter first number : \n");
+    scanf("%d",&iValue1);
 
-    printf("Enter Second Number : \n");
-    scanf("%f",&fValue2);
+    printf("Enter second number : \n");
+    scanf("%d",&iValue2);
 
-    fResult = AddTwoNumber(fValue1, fValue2);            //  Perform the Addition
-    printf("Addition is : %f\n",fResult);
+    iResult = Addition(iValue1, iValue2);      
+
+    printf("Addition is : %d\n",iResult);
+
     return 0;
 }

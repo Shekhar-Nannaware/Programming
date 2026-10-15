@@ -1,47 +1,24 @@
-/*
-    START 
-        Accept number as No
-        if No is completely divisible by 2
-            then print Even 
-        Otherwise
-            print Odd          
-    STOP
+// Approach 1
 
-        START 
-            Accept Number as No
-            Divide No by 2
-            If remainder is 0
-                then print as Even
-            Otherwise
-                print as Odd              
-        STOP
-*/
 import java.util.Scanner;
 
-public class Program09
+class program33
 {
-    public static void main(String args[])
+    public static void main(String A[])
     {
-        int iValue;
-        int iRemander;
+        Scanner scanner = null;
+        int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-        Scanner sc = new Scanner(System.in);
-       System.out.println("Start");
-         
-            System.err.println("Enter fequency : ");
-            iValue = sc.nextInt();
+        scanner = new Scanner(System.in);
 
-            iRemander = iValue % 2;
+        System.out.println("Enter first number : ");
+        iValue1 = scanner.nextInt();
 
-            if(iRemander == 0)
-            {
-                System.out.println("Number is Even "+iValue);
-            }
-            else
-            {
-                System.out.println("Number is Odd "+iValue);
-            }
-        
-       System.out.println("Stop");
+        System.out.println("Enter second number : ");
+        iValue2 = scanner.nextInt();
+
+        iResult = iValue1 + iValue2;    // Business Logic
+
+        System.out.println("Addition is : "+iResult);
     }
 }

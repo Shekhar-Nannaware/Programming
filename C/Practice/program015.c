@@ -1,36 +1,24 @@
-#include<stdio.h>
-#include<stdbool.h>
+#include "Header.h"
 
-bool CheckEvenOdd(int iNo)
+///////////////////////////////////////////////////
+//
+//  Function Name   :   Addition 
+//  Input           :   Integer, Integer 
+//  Output          :   Integer
+//  Description     :   Performs addition
+//  Date            :   04/10/2026
+//  Author          :   Piyush Manohar Khairnar
+//
+///////////////////////////////////////////////////
+
+int Addition(
+                int iNo1,   // First input
+                int iNo2    // Second input
+            )
 {
-    if((iNo % 2) == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+    int iAns = 0;
 
-int main()
-{
-    int iValue = 0;
-    bool bRet = false;
+    iAns = iNo1 + iNo2;     // Business Logic
 
-    printf("Enter number to check whether it is Even or Odd : ");
-    scanf("%d",&iValue);
-
-    bRet = CheckEvenOdd(iValue);
-
-    if(bRet == true)
-    {
-        printf("%d is Even\n",iValue);
-    }
-    else
-    {
-        printf("%d is Odd\n",iValue);
-    }
-
-    return 0;
+    return iAns;
 }

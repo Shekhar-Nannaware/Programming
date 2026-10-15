@@ -1,31 +1,19 @@
 #include<stdio.h>
-
-int CheckEvenOdd(int iNo)
-{
-    int iRemainder = 0;
-
-    iRemainder = iNo % 2;
-
-    return iRemainder;    
-}
+#include<stdlib.h>
 
 int main()
 {
-    int iValue = 0;
-    int iRet = 0;
+    int no = 0;
 
-    printf("Enter Number : \n");
-    scanf("%d", &iValue);
+    printf("Enter number : \n");
+    if(scanf("%d",&no) != 1)
+    {
+        printf("Invalid input\n");
 
-    iRet = CheckEvenOdd(iValue);
-    if (iRet == 0)
-    {
-        printf("Number is Even \n");
+        return EXIT_FAILURE;
     }
-    else
-    {
-        printf("Number is odd \n");
-    }
+
+    printf("Input is valid\n");
     
-    return 0;
+    return EXIT_SUCCESS;
 }

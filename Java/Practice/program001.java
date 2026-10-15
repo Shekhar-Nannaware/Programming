@@ -1,7 +1,7 @@
-public class program01
+class program20
 {
-    public static void main(String[] args) 
+    public static void main(String A[])
     {
-        System.out.println("Hello Java..");
+        System.out.println("Jay Ganesh..."); 
     }
 }

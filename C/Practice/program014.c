@@ -1,38 +1,34 @@
-#include<stdio.h>
-#include<stdbool.h>
+#include "Header.h"
 
-bool CheckEvenOdd(int iNo)
-{
-    if ((iNo % 2) == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-      
-}
+///////////////////////////////////////////////////
+//
+//  Entry point of the application
+//
+///////////////////////////////////////////////////
 
 int main()
 {
-    int iValue = 0;
-    int iRet = 0;
+    int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-    printf("Enter number to check whether it is Even or Odd : ");
-    scanf("%d", &iValue);
-
-    iRet = CheckEvenOdd(iValue);
-
-    if (iRet == true)
+    printf("Enter first number : \n");
+    if(scanf("%d",&iValue1) != 1)
     {
-        printf("%d is Even \n", iValue);
+        fprintf(stderr,"Unable to proceed as input is invalid\n");
+
+        return EXIT_FAILURE;
     }
-    else
+
+    printf("Enter second number : \n");
+    if(scanf("%d",&iValue2) != 1)
     {
-        printf("%d is odd \n", iValue);
+        fprintf(stderr,"Unable to proceed as input is invalid\n");
+
+        return EXIT_FAILURE;
     }
-    
-    return 0;
+
+    iResult = Addition(iValue1, iValue2);      
+
+    printf("Addition is : %d\n",iResult);
+
+    return EXIT_SUCCESS;
 }
-

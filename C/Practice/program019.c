@@ -1,41 +1,37 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
 
-int CalculateTicketPrice(int iAge)
+bool CheckEven(int iNo)
 {
-    // Input Filter
-    if(iAge < 0)
+    if((iNo % 2) == 0)
     {
-        iAge = -iAge;
-    }
-    if (iAge >= 0 && iAge <= 5)
-    {
-        return 0;
-    }
-    else if (iAge >= 6 && iAge <= 18)
-    {
-        return 500;
-    }
-     else if (iAge >= 19 && iAge <= 50)
-    {
-        return 900;
+        return true;
     }
     else
     {
-        return 400;
+        return false;
     }
 }
 
 int main()
 {
     int iValue = 0;
-    int iRet = 0;
+    bool bRet = false;
 
-    printf("Please enter your age to calculate ticket prices : ");
-    scanf("%d", &iValue);
+    printf("Enter number : \n");
+    scanf("%d",&iValue);
 
-    iRet = CalculateTicketPrice(iValue);
+    bRet = CheckEven(iValue);
 
-    printf("Your ticket price will be %d ruppes\n", iRet);
+    if(bRet == true)
+    {
+        printf("It is Even\n");
+    }
+    else
+    {
+        printf("It is Odd\n");
+    }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

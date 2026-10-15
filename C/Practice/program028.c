@@ -1,22 +1,31 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-int Display( int iValue)
+int Minimum(int iNo1, int iNo2)
 {
-    int iCnt = 0;
-
-    for (iCnt = 0; iCnt < iValue; iCnt++)
+    if(iNo1 < iNo2)
     {
-       printf("jay Ganesh...\n");        
+        return iNo1;
+    }
+    else
+    {
+        return iNo2;
     }
 }
 
 int main()
 {
-    int iRet = 0;
-    printf("Enter the frequency : ");
-    scanf("%d",&iRet);
+    int iValue1 = 0, iValue2 = 0, iResult = 0;
 
-    Display(iRet);
+    printf("Enter first number : \n");
+    scanf("%d",&iValue1);
+    
+    printf("Enter second number : \n");
+    scanf("%d",&iValue2);
 
-    return 0;
+    iResult = Minimum(iValue1, iValue2);
+
+    printf("Minimum number is : %d\n",iResult);
+    
+    return EXIT_SUCCESS;
 }
